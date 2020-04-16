@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 
 import {Tabs, TabPane} from '../src'
-import "../dist/style.css";
+import "../src/style/_tabs.scss";
 
 export default class App extends Component {
     constructor(props) {

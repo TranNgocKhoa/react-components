@@ -13,14 +13,15 @@ const environment = {
 module.exports = {
     mode: environment[process.env.NODE_ENV],
     entry: {
-        index: "./src/index.jsx",
+        index: "./src/index.js",
         style: "./src/style/_tabs.scss"
     },
     output: {
         filename: "[name].js",
         path: path.resolve(__dirname, "dist"),
-        libraryTarget: "umd",
-        library: "Tabs"
+        libraryTarget: 'umd',
+        library: "Tabs",
+        globalObject: 'this'
     },
     resolve: {
         extensions: [".js", ".jsx"]
@@ -35,6 +36,7 @@ module.exports = {
                     options: {
                         presets: [
                             "@babel/preset-env",
+                            "@babel/preset-react",
                         ],
                         plugins: [
                             "@babel/plugin-proposal-object-rest-spread",

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 
 export default class TabPane extends React.Component {
-
+    state = {};
 }
 
 TabPane.propTypes = {
