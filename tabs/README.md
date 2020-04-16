@@ -3,6 +3,8 @@
 
 Simple Tabs component
 
+![Image Screen Shot](https://user-images.githubusercontent.com/30297271/79429971-6f0a9880-7ff2-11ea-85d4-59226cc61c51.png)
+
 ## Usage
 
 ### API
