@@ -7,5 +7,9 @@ export default class TabPane extends React.Component {
 
 TabPane.propTypes = {
     tab: PropTypes.string.isRequired,
-    children: PropTypes.element,
+    children: PropTypes.oneOfType(
+        [
+            PropTypes.arrayOf(PropTypes.node),
+            PropTypes.node
+        ]).isRequired
 };

@@ -10,7 +10,7 @@ export default class Tabs extends React.Component {
         super(props);
 
         this.state = {
-            activeTab: this.props.activeTab ?  this.props.activeTab : this.props.children[0].props.tab,
+            activeTab: this.props.activeTab ? this.props.activeTab : this.props.children[0].props.tab,
         };
     }
 
@@ -37,6 +37,7 @@ export default class Tabs extends React.Component {
 
                         return (
                             <li
+                                key={tab}
                                 className={activeTab === tab ? "tab-list-item tab-list-active" : "tab-list-item"}
                                 onClick={() => onClickTabItem(tab)}
                             >
@@ -58,5 +59,8 @@ export default class Tabs extends React.Component {
 
 Tabs.propTypes = {
     activeTab: PropTypes.string,
-    children: PropTypes.instanceOf(Array).isRequired,
+    children: PropTypes.oneOfType(
+        [
+            PropTypes.arrayOf(PropTypes.node),
+        ]).isRequired
 };
